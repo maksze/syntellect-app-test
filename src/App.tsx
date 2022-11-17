@@ -80,7 +80,7 @@ function App() {
 
       <footer className="py-12">
         17.11.2022. Made with love by
-        <a href="https://t.me/maksze" target="_black" className="ml-1">
+        <a href="https://t.me/maksze" target="_blank" className="ml-1">
           @maksze
         </a>
       </footer>

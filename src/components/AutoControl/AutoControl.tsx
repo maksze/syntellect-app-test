@@ -29,6 +29,7 @@ export const AutoControl: React.FC<IAutoControl> = observer(({ limit = 5 }) => {
                 "bg-slate-200": i % 2,
               })}
               onClick={() => setNeedle(name)}
+              key={fullName}
             >
               <img
                 src={flag}
