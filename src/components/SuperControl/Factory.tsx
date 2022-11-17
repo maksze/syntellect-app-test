@@ -31,6 +31,7 @@ export const SuperControlV1: React.FC<{}> = () => {
 export const SuperControlV2: React.FC<{}> = () => {
   const [value, setValue] = useState<TInputValue>("");
 
+  // TODO: mv to util
   function isNumber(value: string | number): boolean {
     return value != null && value !== "" && !isNaN(Number(value.toString()));
   }

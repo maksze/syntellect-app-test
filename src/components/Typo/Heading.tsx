@@ -16,3 +16,11 @@ export const H2: React.FC<ITypografix> = ({ children, className, id }) => {
     </h2>
   );
 };
+
+export const H3: React.FC<ITypografix> = ({ children, className, id }) => {
+  return (
+    <h3 className={cx("text-xl font-bold mt-4 mb-6", className)} id={id}>
+      {children}
+    </h3>
+  );
+};

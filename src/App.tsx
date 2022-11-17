@@ -1,6 +1,7 @@
 import React from "react";
-import { H1, H2, P, List, Li } from "components/Typo";
+import { H1, H2, H3, P, List, Li } from "components/Typo";
 import { SuperControlV1, SuperControlV2 } from "components/SuperControl";
+import { AutoControl } from "./components/AutoControl";
 import "./App.css";
 
 function App() {
@@ -18,7 +19,8 @@ function App() {
             вызывается при нажатии на кнопку.
           </P>
 
-          <H2>Контрол с 2 кнопками справа</H2>
+          <H3>Контрол с 2 кнопками справа</H3>
+
           <List>
             <Li>
               При нажатии на первую кнопку очищается содерживое в контроле;
@@ -29,10 +31,8 @@ function App() {
             </Li>
           </List>
           <SuperControlV1 />
-        </section>
 
-        <section>
-          <H2>Контрол с 1 кнопкой справа и 1 кнопкой слева</H2>
+          <H3>Контрол с 1 кнопкой справа и 1 кнопкой слева</H3>
           <List>
             <Li>
               При нажатии на кнопку справа вызывается alert с текстом в контроле
@@ -44,7 +44,46 @@ function App() {
           </List>
           <SuperControlV2 />
         </section>
+
+        <section className="mt-12">
+          <H2>Контрол-автокомплит</H2>
+          <List>
+            <Li>
+              Текстовый контрол, который позволяет выводить подсказки при наборе
+              текста. Подсказки выводятся под контролом в виде выпадающего
+              списка. В подсказках должно выводиться `наименование`, `полное
+              наименование` и `флаг`. При выборе подсказки, значение из неё
+              проставляется в контрол.
+            </Li>
+            <Li>
+              Контрол должен иметь настройку максимального кол-ва выводимых
+              подсказок.
+            </Li>
+          </List>
+
+          <div className="flex">
+            <div className="p-2">
+              <h3 className="mb-4 text-sm">
+                Максимальное кол-во подсказок - 3
+              </h3>
+              <AutoControl limit={3} />
+            </div>
+            <div className="p-2">
+              <h3 className="mb-4 text-sm">
+                Максимальное кол-во подсказок - 10
+              </h3>
+              <AutoControl limit={10} />
+            </div>
+          </div>
+        </section>
       </main>
+
+      <footer className="py-12">
+        17.11.2022. Made with love by
+        <a href="https://t.me/maksze" target="_black" className="ml-1">
+          @maksze
+        </a>
+      </footer>
     </div>
   );
 }
